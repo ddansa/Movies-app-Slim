@@ -1,4 +1,6 @@
-.sass-cache
+### Sass ###
+.sass-cache/
+*.css.map
 
 # =========================
 # Operating System Files
