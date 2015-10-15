@@ -122,6 +122,52 @@ h4 {
   color: #222;
 }
 
+/* movie page */
+.movie-page .movie-header {
+  width: 100%;
+  height: 25%;
+}
+.movie-page .movie_pic img {
+  width: 60%;
+}
+.movie-page .movie-top_content h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.movie-page h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.movie-page h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.movie-page .director {
+  width: 100%;
+  height: 50%;
+}
+.movie-page .actors {
+  width: 100%;
+  height: 50%;
+}
+.movie-page .movie-content_people.col-6 {
+  padding-left: 30%;
+}
+
 * {
   background: rgba(0, 0, 0, 0.05);
 }
@@ -387,63 +433,4 @@ h4 {
   .moviecovers img:nth-of-type(3n + 1) {
     clear: both;
   }
-}
-
-
-
-/* movie page */
-.movie-header {
-  width: 100%;
-  height: 25%;
-}
-
-.movie_pic img {
-  
-  width: 60%;
-}
-
-.movie-top_content h1 {
-  display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-
-h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  
-}
-
-
-.director {
-  width: 100%;
-  height: 50%;
-}
-
-.actors {
-  width: 100%;
-  height: 50%;
-}
-
-.movie-content_people.col-6 {
-  padding-left: 30%;
-
 }
