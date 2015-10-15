@@ -1,0 +1,56 @@
+@import "partials/variables";
+@import "partials/layout";
+
+* {
+    background: none;
+}
+
+body {
+    background: $darkgray;
+    * {
+        box-sizing: border-box;
+    }
+}
+
+#search-wrap {
+    display: block;
+    margin: 25% auto;
+    width: 75%;
+}
+
+#filter-search {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    height: 2.5em;
+    line-height: 2.5;
+    font-size: 2em;
+    background: #EAEAEA;
+    border: 0;
+    border-radius: 50px;
+    outline: 0;
+    padding: 0 1em;
+}
+
+.filter-controller {
+    display: inline-block;
+    border-radius: 50px;
+    overflow: hidden;
+    .filter-btn, label {
+        border: 0;
+        outline: 0;
+        background: #309DED;
+        color: #FFF;
+        font-size: 1em;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        float: left;
+    }
+}
+
+
+@include media('<=tablet'){
+    #search-wrap {
+    }
+}

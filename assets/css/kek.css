@@ -1,175 +1,6 @@
-* {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-  box-sizing: border-box;
-}
-
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
 /**** SASS VARIABLES ****/
 /*****   Colors   *****/
-body {
-  font: normal small Verdana, Geneva, sans-serif;
-  background: #EAEAEA;
-  color: #222;
-  line-height: 1.4;
-}
-
-h1, h2, h3, h4 {
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-h4 {
-  font-size: 1.25em;
-}
-
-.dark {
-  background: #333;
-  color: #EAEAEA;
-}
-
-#cover-scroller-wrap h2 {
-  color: #999;
-  font-weight: 700;
-  padding: 1em 30px 0;
-}
-
-#primary-nav {
-  height: 40px;
-  overflow: hidden;
-  background: #222;
-}
-#primary-nav li {
-  float: left;
-}
-#primary-nav li:first-child {
-  margin-right: 2em;
-}
-#primary-nav li a {
-  color: #EAEAEA;
-  padding: 12px 18px;
-  background: #222;
-  display: block;
-  text-decoration: none;
-}
-#primary-nav li a:hover {
-  background: #EAEAEA;
-  color: #222;
-}
-
-/* movie page */
-.movie-page .movie-header {
-  width: 100%;
-  height: 25%;
-}
-.movie-page .movie_pic img {
-  width: 60%;
-}
-.movie-page .movie-top_content h1 {
-  display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-.movie-page h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-.movie-page h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-}
-.movie-page .director {
-  width: 100%;
-  height: 50%;
-}
-.movie-page .actors {
-  width: 100%;
-  height: 50%;
-}
-.movie-page .movie-content_people.col-6 {
-  padding-left: 30%;
-}
-
-* {
+body * {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -446,4 +277,52 @@ h4 {
   .moviecovers img:nth-of-type(3n + 1) {
     clear: both;
   }
+}
+
+* {
+  background: none;
+}
+
+body {
+  background: #333;
+}
+body * {
+  box-sizing: border-box;
+}
+
+#search-wrap {
+  display: block;
+  margin: 25% auto;
+  width: 75%;
+}
+
+#filter-search {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  height: 2.5em;
+  line-height: 2.5;
+  font-size: 2em;
+  background: #EAEAEA;
+  border: 0;
+  border-radius: 50px;
+  outline: 0;
+  padding: 0 1em;
+}
+
+.filter-controller {
+  display: inline-block;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.filter-controller .filter-btn, .filter-controller label {
+  border: 0;
+  outline: 0;
+  background: #309DED;
+  color: #FFF;
+  font-size: 1em;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+  float: left;
 }

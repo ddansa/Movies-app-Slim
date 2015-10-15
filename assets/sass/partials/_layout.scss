@@ -77,9 +77,21 @@
 
 #cover-scroller {
 	padding: $padding-large;
-	text-align: center;
 	white-space: nowrap;
 	overflow: auto;
+	.item {
+		display: inline-block;
+		width: 185px;
+		height: 278px;
+		cursor: pointer;
+		margin: 2px;
+		transition: all 200ms ease;
+		transition-delay: 0s;
+		&:hover {
+			transform: scale(1.10);
+			/**transition-delay: 300ms;*/
+		}
+	}
 }
 
 .mainview {
