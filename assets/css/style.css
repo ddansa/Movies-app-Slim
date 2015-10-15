@@ -95,8 +95,9 @@ h4 {
 }
 
 #cover-scroller-wrap h2 {
-  text-align: center;
-  padding: 1em 0 0;
+  color: #999;
+  font-weight: 700;
+  padding: 1em 30px 0;
 }
 
 #primary-nav {
@@ -292,9 +293,21 @@ h4 {
 
 #cover-scroller {
   padding: 2em;
-  text-align: center;
   white-space: nowrap;
   overflow: auto;
+}
+#cover-scroller .item {
+  display: inline-block;
+  width: 185px;
+  height: 278px;
+  cursor: pointer;
+  margin: 2px;
+  transition: all 200ms ease;
+  transition-delay: 0s;
+}
+#cover-scroller .item:hover {
+  transform: scale(1.1);
+  /**transition-delay: 300ms;*/
 }
 
 .mainview {
