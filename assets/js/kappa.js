@@ -1,17 +1,9 @@
 
 //
-var api_url = "http://api.themoviedb.org/3/",
-	api_key = "?api_key=34a209538e9c2bf4cbcdef696f2bf6a2";
-
-function apiURL(call, page) {
-	var txt = api_url + call + api_key;
-	return ($.isNumeric(page) && page <= 50) ?
-		txt + '&page=' + page :
-		txt;
-}
-
-/*$(function () {
+$('#btn-search').on('click', function (){
+	console.log("kappa 123")
 	$.ajax({
+<<<<<<< HEAD
 			//url: api_url + 'movie/popular' + api_key + '&page=1',
 			url: apiURL('movie/popular', 1),
 			jsonp: 'callback',
@@ -56,7 +48,16 @@ $('#main-search').submit(function (e){
 				$('html, body').animate({
 			    	scrollTop: parseInt($('.moviecovers').offset().top,10)
 				}, 500);
+=======
+		url: 'http://api.themoviedb.org/3/movie/popular?api_key=34a209538e9c2bf4cbcdef696f2bf6a2&page=1',
+		jsonp: 'callback',
+		dataType: 'jsonp',
+	}).success(function (data){
+		$.each(data.results, function(n, movie){
+			if(movie.poster_path !== 'N/A') {
+				$('#cover-scroller').append('<img src="http://image.tmdb.org/t/p/w185/' + movie.poster_path + '" alt="image"/>')
+>>>>>>> origin/master
 			}
 		});
-	}
+	});
 });
