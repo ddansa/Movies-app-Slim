@@ -1,4 +1,3 @@
-@import "variables";
 
 body {
 	font: normal small Verdana, Geneva, sans-serif;
@@ -57,8 +56,7 @@ h4 {
 			display: block;
 			text-decoration: none;
 			&:hover {
-				background: $white;
-				color: $black;
+
 			}
 		}
 	}
