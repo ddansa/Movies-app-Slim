@@ -26,9 +26,16 @@ function apiURL(call, page) {
 		});
 })*/
 
-$('#filter-search').on('click', function (e){
+$('#filter-search-bar').focusout(function(e) {
+	($(this).val()) ?
+		$(this).addClass('active') :
+		$(this).removeClass('active');
+});
+
+$('#main-search').submit(function (e){
 	e.preventDefault();
-	$('.moviecover').empty();
+	$('.moviecovers').empty();
+	$('.filter-error').hide().empty();
 	var search_q = encodeURIComponent($('#filter-search-bar').val());
 	if (search_q) {
 		$.ajax({
@@ -36,14 +43,20 @@ $('#filter-search').on('click', function (e){
 			jsonp: 'callback',
 			dataType: 'jsonp',
 		}).success(function (data){
-			$.each(data.results, function(n, movie) {
-				if(movie.poster_path) {
-					$('.moviecovers').append('<img src="https://image.tmdb.org/t/p/w185/' + movie.poster_path + '" alt="image"/>');
-				}
-			});
-			$('html, body').animate({
-			    scrollTop: parseInt($('.moviecovers').offset().top,10)
-			}, 500);
+
+			if (data.results.length == 0 ) {
+				$('.filter-error').append('<span>No results found :(</span>').fadeIn('250');
+				$('.filter-error');
+			} else {
+				$.each(data.results, function(n, movie) {
+					if(movie.poster_path) {
+						$('.moviecovers').append('<img src="https://image.tmdb.org/t/p/w185/' + movie.poster_path + '" alt="image"/>');
+					}
+				});
+				$('html, body').animate({
+			    	scrollTop: parseInt($('.moviecovers').offset().top,10)
+				}, 500);
+			}
 		});
 	}
 });

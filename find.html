@@ -7,6 +7,7 @@
     <title>Movieapp</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/kek.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
 </head>
 <body>
     <header>
@@ -25,10 +26,15 @@
         <div id="search-container">
             <div id="search-wrap">
                 <form id="main-search">
-                    <input id="filter-search-bar" type="text" placeholder="Search"/>
+                    <div>
+                        <input id="filter-search-bar" type="text" placeholder="Search" tabindex="1" />
+                    </div>
+                    <div class="filter-error">
+                    </div>
                     <div class="filter-controls">
                     <div class="filter-controller">
-                        <button id="filter-search" class="filter-btn">Search</button>
+
+                        <button type="submit" id="filter-search" class="filter-btn" tabindex="2"><i class="icon icon-search"></i></button>
                     </div>
                         <!--<div class="filter-controller with-label">
                             <button id="filter-genre" class="filter-btn">Genre</button>

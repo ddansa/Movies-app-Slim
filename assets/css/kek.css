@@ -285,6 +285,7 @@
 
 body {
   background: #333;
+  color: #EAEAEA;
 }
 body * {
   box-sizing: border-box;
@@ -303,10 +304,9 @@ body * {
 
 #filter-search-bar {
   display: block;
-  width: 100%;
+  width: 10em;
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 1em;
   height: 2.5em;
   line-height: 2.5;
   font-size: 2em;
@@ -315,10 +315,29 @@ body * {
   border-radius: 50px;
   outline: 0;
   padding: 0 1em;
+  transition: width 250ms;
+}
+#filter-search-bar:focus, #filter-search-bar.active {
+  width: 100%;
 }
 
-.filter-controls {
+#main-search {
   text-align: center;
+}
+#main-search > div {
+  margin-bottom: 2em;
+}
+#main-search > div:last-child {
+  margin-bottom: 0;
+}
+
+.filter-error {
+  display: none;
+}
+.filter-error span {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  background: #C65353;
 }
 
 .filter-controller {
@@ -341,7 +360,7 @@ body * {
   padding: 0 25px;
   transition: color 150ms, background 150ms;
 }
-.filter-controller .filter-btn:hover {
+.filter-controller .filter-btn:hover, .filter-controller .filter-btn:focus {
   background: #1074BC;
 }
 .filter-controller.with-label .filter-btn, .filter-controller.with-label label {
@@ -427,7 +446,7 @@ body * {
 
   margin: 0 2%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .moviecovers img {
     float: left;
     clear: none;
