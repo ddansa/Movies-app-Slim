@@ -10,7 +10,7 @@ function apiURL(call, page) {
 		txt;
 }
 
-$(function () {
+/*$(function () {
 	$.ajax({
 			//url: api_url + 'movie/popular' + api_key + '&page=1',
 			url: apiURL('movie/popular', 1),
@@ -24,19 +24,26 @@ $(function () {
 				}
 			});
 		});
-})
+})*/
 
-$('#btn-search').on('click', function (){
-	var search_q = encodeURIComponent($('#search').val());
-	$.ajax({
-		url: apiURL('search/movie', 1) + '&query=' + search_q,
-		jsonp: 'callback',
-		dataType: 'jsonp',
-	}).success(function (data){
-		$.each(data.results, function(n, movie) {
-			if(movie.poster_path) {
-				$('.moviecovers').append('<img src="https://image.tmdb.org/t/p/w185/' + movie.poster_path + '" alt="image"/>');
-			}
+$('#filter-search').on('click', function (e){
+	e.preventDefault();
+	$('.moviecover').empty();
+	var search_q = encodeURIComponent($('#filter-search-bar').val());
+	if (search_q) {
+		$.ajax({
+			url: apiURL('search/movie', 1) + '&query=' + search_q,
+			jsonp: 'callback',
+			dataType: 'jsonp',
+		}).success(function (data){
+			$.each(data.results, function(n, movie) {
+				if(movie.poster_path) {
+					$('.moviecovers').append('<img src="https://image.tmdb.org/t/p/w185/' + movie.poster_path + '" alt="image"/>');
+				}
+			});
+			$('html, body').animate({
+			    scrollTop: parseInt($('.moviecovers').offset().top,10)
+			}, 500);
 		});
-	});
+	}
 });
