@@ -1,7 +1,3 @@
-* {
-  background: rgba(0, 0, 0, 0.05);
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -117,14 +113,6 @@ h4 {
   background: #222;
   display: block;
   text-decoration: none;
-}
-#primary-nav li a:hover {
-  background: #EAEAEA;
-  color: #222;
-}
-
-* {
-  background: rgba(0, 0, 0, 0.05);
 }
 
 .col-1 {
@@ -291,23 +279,78 @@ h4 {
   min-height: 300px;
 }
 
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+}
+
 #cover-scroller {
   padding: 2em;
   white-space: nowrap;
   overflow: auto;
 }
 #cover-scroller .item {
+  position: relative;
   display: inline-block;
-  width: 185px;
-  height: 278px;
+  background-color: #222;
+  width: 300px;
+  height: 169px;
   cursor: pointer;
   margin: 2px;
-  transition: all 200ms ease;
+  transition: all 100ms ease;
   transition-delay: 0s;
 }
 #cover-scroller .item:hover {
-  transform: scale(1.1);
+  z-index: 999;
+  transform: scale(1.12);
   /**transition-delay: 300ms;*/
+}
+#cover-scroller .item .overlay {
+  white-space: normal;
+  word-wrap: break-word;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+#cover-scroller .item .overlay .top {
+  padding: 10px;
+}
+#cover-scroller .item .overlay .top .rating {
+  display: inline-block;
+  border-radius: 2px;
+  color: #222;
+  background: #f0ad4e;
+  font-weight: bold;
+  font-size: 85%;
+  padding: 2px;
+  text-shadow: none;
+  min-width: 25px;
+  text-align: center;
+}
+#cover-scroller .item .overlay .top .bookmark {
+  float: right;
+  visibility: hidden;
+}
+#cover-scroller .item .overlay .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-weight: 700;
+  padding: 10px;
+}
+#cover-scroller .item .overlay .bottom .title {
+  font-size: 14px;
+  /**background-color: rgba(0,0,0,0.6);*/
+}
+#cover-scroller .item .overlay .bottom .release {
+  font-size: 14px;
+}
+#cover-scroller .item .overlay .bottom .genre {
+  display: block;
+  font-size: 11px;
 }
 
 .mainview {
@@ -400,4 +443,18 @@ h4 {
   .moviecovers img:nth-of-type(3n + 1) {
     clear: both;
   }
+}
+
+.search {
+  width: 640px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.search input {
+  width: inherit;
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
 }
